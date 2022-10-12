@@ -1,0 +1,121 @@
+<!DOCTYPE html> <html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=9133eb49-3a97-4b2d-90be-6b80a97a5036" type="text/javascript"></script>
+    <title>Главная</title>
+</head>
+
+
+
+<style>
+    .wrapper a {
+        font-size: 30px;
+        text-transform: capitalize;
+    }
+
+    .wrapper button {
+        margin-bottom: 25px;
+        width: 300px;
+        height: 45px;
+    }
+</style>
+
+<body>
+
+    <div class="wrapper" style="padding: 50px;">
+        <a href="index.html" style="display: block; margin-bottom: 20px;">
+            Главная
+        </a>
+        <a href="catalog.html" style="display: block; margin-bottom: 20px;">
+            Каталог
+        </a>
+        <a href="catalog-item.html" style="display: block; margin-bottom: 20px;">
+            Карточка товара
+        </a>
+        <a href="production.html" style="display: block; margin-bottom: 20px;">
+            Производство
+        </a>
+
+
+
+
+        <button style="border: 2px solid #000;margin-bottom: 20px;" data-modal="consultModal">
+            Получить консультацию
+        </button>
+
+    </div>
+
+    <div class="modal" id="consultModal">
+    <div class="modal__dialog">
+        <div class="modal__top">
+            <div class="modal__title display2">Получить консультацию</div>
+            <button type="button" class="modal__close" data-bs-dismiss="modal" aria-label="Close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px"  viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"  fill="#000000"  d="M8.0,6.5858 C8.0,6.5858 12.949951,1.6355438 12.949951,1.6355438 C12.949951,1.6355438 14.363892,3.049591 14.363892,3.049591 C14.363892,3.049591 9.41394,7.9998474 9.41394,7.9998474 C9.41394,7.9998474 14.363892,12.94957 14.363892,12.94957 C14.363892,12.94957 12.949951,14.363617 12.949951,14.363617 C12.949951,14.363617 8.0,9.41391 8.0,9.41391 C8.0,9.41391 3.0499268,14.363617 3.0499268,14.363617 C3.0499268,14.363617 1.6359863,12.94957 1.6359863,12.94957 C1.6359863,12.94957 6.5859375,7.9998474 6.5859375,7.9998474 C6.5859375,7.9998474 1.6359863,3.049591 1.6359863,3.049591 C1.6359863,3.049591 3.0499268,1.6355438 3.0499268,1.6355438 C3.0499268,1.6355438 8.0,6.5858 8.0,6.5858 Z"/>
+                </svg>
+            </button>
+        </div>
+
+        <form action="" class="modal__form">
+            <fieldset class="form-group">
+                <input type="text" placeholder="Ваше имя">
+                <span class="form-group__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px">
+                        <path fill-rule="evenodd"  fill="none" d="M-0.000,-0.000 L24.000,-0.000 L24.000,24.000 L-0.000,24.000 L-0.000,-0.000 Z"/>
+                        <path fill-rule="evenodd"  fill="rgb(0, 15, 159)" d="M18.000,22.000 L18.000,20.000 C18.000,19.204 17.684,18.441 17.121,17.878 C16.559,17.316 15.796,17.000 15.000,17.000 L9.000,17.000 C8.204,17.000 7.441,17.316 6.879,17.878 C6.316,18.441 6.000,19.204 6.000,20.000 L6.000,22.000 L4.000,22.000 L4.000,20.000 C4.000,18.674 4.527,17.402 5.464,16.464 C6.402,15.527 7.674,15.000 9.000,15.000 L15.000,15.000 C16.326,15.000 17.598,15.527 18.536,16.464 C19.473,17.402 20.000,18.674 20.000,20.000 L20.000,22.000 L18.000,22.000 ZM16.243,11.243 C15.117,12.367 13.591,13.000 12.000,13.000 C11.212,13.000 10.432,12.845 9.704,12.543 C8.976,12.242 8.314,11.799 7.757,11.243 C7.200,10.685 6.758,10.024 6.457,9.296 C6.155,8.568 6.000,7.788 6.000,7.000 C6.000,6.212 6.155,5.432 6.457,4.704 C6.758,3.976 7.200,3.314 7.757,2.757 C8.314,2.200 8.976,1.758 9.704,1.457 C10.432,1.155 11.212,1.000 12.000,1.000 C13.591,1.000 15.117,1.632 16.243,2.757 C17.368,3.882 18.000,5.409 18.000,7.000 C18.000,8.591 17.368,10.117 16.243,11.243 ZM14.828,4.172 C14.078,3.421 13.061,2.999 12.000,2.999 C10.939,2.999 9.922,3.421 9.172,4.172 C8.421,4.921 8.000,5.939 8.000,7.000 C8.000,8.061 8.421,9.078 9.172,9.828 C9.922,10.578 10.939,11.000 12.000,11.000 C13.061,11.000 14.078,10.578 14.828,9.828 C15.578,9.078 16.000,8.061 16.000,7.000 C16.000,5.939 15.578,4.921 14.828,4.172 Z"/>
+                    </svg>
+                </span>
+            </fieldset>
+            <fieldset class="form-group">
+                <input type="tel" placeholder="Ваш телефон">
+                <span class="form-group__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px">
+                        <path fill-rule="evenodd"  fill="none" d="M-0.000,-0.000 L24.000,-0.000 L24.000,24.000 L-0.000,24.000 L-0.000,-0.000 Z"/>
+                        <path fill-rule="evenodd"  fill="rgb(0, 15, 159)" d="M20.742,20.593 C20.576,20.777 20.348,20.893 20.102,20.918 C19.572,20.973 19.038,21.000 18.500,21.000 C9.940,21.000 3.000,14.060 3.000,5.500 C3.000,4.962 3.027,4.428 3.082,3.897 C3.107,3.651 3.223,3.423 3.407,3.257 C3.591,3.091 3.829,2.999 4.077,2.999 L8.539,2.999 C8.791,2.999 9.033,3.095 9.218,3.265 C9.402,3.436 9.516,3.670 9.536,3.921 C9.662,5.527 10.127,7.090 10.900,8.503 C11.017,8.718 11.052,8.968 10.998,9.207 C10.943,9.446 10.803,9.656 10.604,9.798 L9.366,10.682 C10.304,12.330 11.669,13.695 13.318,14.634 L14.202,13.396 C14.344,13.197 14.554,13.057 14.793,13.002 C15.031,12.948 15.281,12.982 15.496,13.100 C16.910,13.873 18.472,14.337 20.079,14.464 C20.330,14.484 20.564,14.597 20.735,14.782 C20.905,14.967 21.000,15.209 21.000,15.461 L21.000,19.923 C21.000,20.170 20.908,20.409 20.742,20.593 ZM19.000,16.353 C17.731,16.165 16.496,15.795 15.332,15.256 L13.975,17.156 C13.429,16.943 12.898,16.693 12.387,16.406 L12.329,16.373 C10.368,15.256 8.743,13.632 7.627,11.671 L7.594,11.613 C7.307,11.102 7.056,10.571 6.844,10.025 L8.744,8.668 C8.205,7.504 7.835,6.268 7.647,5.000 L5.010,5.000 C5.004,5.166 5.001,5.333 5.001,5.500 C5.000,12.956 11.044,19.000 18.500,19.000 C18.667,19.000 18.834,18.997 19.000,18.990 L19.000,16.353 Z"/>
+                    </svg>
+                </span>
+            </fieldset>
+            <div class="modal__hint">Нажимая на кнопку “Отправить” вы соглашаетесь с политикой конфиденциальности</div>
+            <button class="modal__btn mbtn mbtn-primary">
+                Отправить
+            </button>
+        </form>
+    </div>
+</div>
+
+
+
+    <!--  -->
+    <script src="js/libs.min.js"></script>
+<script src="js/main.min.js"></script>
+<script type="text/javascript">
+    ymaps.ready(init);
+    const coord = [54.017310, 38.074447]
+
+    function init() {
+        var myMap = new ymaps.Map("map", {
+            center: coord,
+            zoom: 15
+        });
+
+        var myPlacemark = new ymaps.Placemark(coord, null, {
+            iconLayout: 'default#image',
+            iconImageHref: "img/pin.svg",
+            iconImageSize: [48, 59],
+            // iconImageOffset: [-15, -44]
+        });
+        myMap.geoObjects.add(myPlacemark);
+        myMap.behaviors.disable('scrollZoom');
+
+    }
+</script>
+
+</body>
+
+</html>
